@@ -2,7 +2,7 @@ import csv, os
 from tabulate import tabulate
 
 
-LEVELS = {"1": "words1.csv", "2": "words2.csv", "3": "words3.csv"}
+LEVELS = {"1": "words/words1.csv", "2": "words/words2.csv", "3": "words/words3.csv"}
 
 # Can we use this program to pull straight from Chat GPT or elsewhere?
     # We would have to make a function that checks for duplicate or morpholized words amongst the three level files...

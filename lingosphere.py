@@ -9,7 +9,7 @@ import re, sys, csv, os, random, hashlib, time
 
 # Files:
 USERS_FILE = "users.csv"
-LEVELS = {"1": "words/words1.csv", "2": "words2.csv", "3": "words3.csv"}
+LEVELS = {"1": "words/words1.csv", "2": "words/words2.csv", "3": "words/words3.csv"}
 TODAY_AUDIO = "today.mp3"
 CURRENT_AUDIO = "current.mp3"
 ARCHIVES_FILE = "archives.csv"
