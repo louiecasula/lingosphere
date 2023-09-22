@@ -1,0 +1,39 @@
+# NAME
+    Lingosphere: A Word of the Day Program
+# STRUCTURE
+    Sign in
+    Menu options
+    API / Web scraping *****
+# FUNCTIONS
+    [1] Word of the day
+        [1] Add to favorites
+        [2] Skip
+        [3] Learn more
+            [1] Definition
+            [2] Etymology
+            [3] Example sentence
+            [4] Pronunciation
+    [2] Favorites
+        (User inputs a word from favorites list)
+        [1] Definition
+        [2] Etymology
+        [3] Example sentence
+        [4] Pronunciation
+        [5] Remove
+            "Are you sure? (y/n)"
+            "{word} removed from favorites"
+    [3] Options *****
+        [1] Change word level
+            [1] Level 1: Novice
+            [2] Level 2: Intermediate
+            [3] Level 3: Fluent
+        [2] Change username
+        [3] Change password
+    [4] Exit
+        "See you tomorrow!"
+# FUTURE FEATURES
+    Themed word days (holidays, anniversaries, special events)
+    Additional languages
+    Email list
+    Website
+    App

@@ -71,7 +71,7 @@ def signup():
             print(f"You chose level {level}!")
             break
     # Save user data into users.csv
-    with open(USERS_FILE, "a") as f:
+    with open(USERS_FILE, "a", encoding='utf8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=["username","password","level"])
         if os.stat(USERS_FILE).st_size == 0:
             writer.writeheader()
@@ -103,7 +103,7 @@ def logout():
 
 def user_exists(username):
     if os.path.exists(USERS_FILE) and os.stat(USERS_FILE).st_size > 0:
-            with open(USERS_FILE, "r") as f:
+            with open(USERS_FILE, "r", encoding='utf8') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
                     if username == row['username']:
