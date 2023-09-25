@@ -20,7 +20,7 @@
         [3] Example sentence
         [4] Pronunciation
         [5] Remove
-            "Are you sure? (y/n)"
+            "Are you sure? (y/n)" *****
             "{word} removed from favorites"
     [3] Options *****
         [1] Change word level

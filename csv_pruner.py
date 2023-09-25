@@ -1,15 +1,15 @@
 import csv, os
 from tabulate import tabulate
 
-
-LEVELS = {"1": "words/words1.csv", "2": "words/words2.csv", "3": "words/words3.csv"}
+# Files:
+LEVELS = {"1": "words1.csv", "2": "words2.csv", "3": "words3.csv"}
 
 # Can we use this program to pull straight from Chat GPT or elsewhere?
     # We would have to make a function that checks for duplicate or morpholized words amongst the three level files...
         # Currently, there are 4 duplicates between level 2 and level 3. Fix that.
 
 
-# Only works for "..._favorites.csv" or "words....csv"
+# Works for "..._favorites.csv", "..._archives.csv" and "words....csv" files
 def format(file):
     words = []
     dated = False
@@ -36,18 +36,12 @@ def format(file):
     while True:
         matches.clear()
         start_length = len(sorted_words)
-        # start_length = len(words)
-        # print(start_length)
         for word in sorted_words:
-        # for word in words:
             if word["Word"] not in matches:
                 matches.append(word["Word"])
             else:
                 sorted_words.remove(word)
-                # words.remove(word)
         end_length = len(sorted_words)
-        # end_length = len(words)
-        # print(end_length)
         if start_length == end_length:
             break
 
@@ -58,7 +52,6 @@ def format(file):
         # Write each row with quotes around each value
         writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
         for row in sorted_words:
-        # for row in words:
             writer.writerow(row)
     words.clear()
     sorted_words.clear()
