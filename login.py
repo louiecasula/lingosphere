@@ -94,7 +94,8 @@ def login():
                 current_user["username"], current_user["level"] = row["username"], row["level"]
                 return {"username": row["username"], "level": row["level"]}
             else:
-                print("Invalid username or password")
+                # print("Invalid username or password")
+                raise TypeError("Invalid username or password")
 
 
 def logout():
