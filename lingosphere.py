@@ -234,6 +234,7 @@ def sign_in():
     try:
         current_user = login()
     except TypeError:
+        clear_screen()
         print("Invalid username or password")
     else:
         global FAVORITES_FILE
