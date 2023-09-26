@@ -231,16 +231,20 @@ def save_sound(word, file):
 
 def sign_in():
     global current_user
-    current_user = login()
-    global FAVORITES_FILE
-    FAVORITES_FILE = f"{current_user['username']}_favorites.csv"
-    global ARCHIVES_FILE
-    ARCHIVES_FILE = f"{current_user['username']}_archives.csv"
-    global POOL_FILE
-    POOL_FILE = f"{current_user['username']}_wordpool.csv"
-    initialize()
-    wotd()
-    wotd_menu()
+    try:
+        current_user = login()
+    except TypeError:
+        print("Invalid username or password")
+    else:
+        global FAVORITES_FILE
+        FAVORITES_FILE = f"{current_user['username']}_favorites.csv"
+        global ARCHIVES_FILE
+        ARCHIVES_FILE = f"{current_user['username']}_archives.csv"
+        global POOL_FILE
+        POOL_FILE = f"{current_user['username']}_wordpool.csv"
+        initialize()
+        wotd()
+        wotd_menu()
 
 
 def admin():

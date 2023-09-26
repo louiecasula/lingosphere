@@ -93,7 +93,7 @@ def login():
             if username == row["username"] and authorize_hash == row["password"]:
                 current_user["username"], current_user["level"] = row["username"], row["level"]
                 return {"username": row["username"], "level": row["level"]}
-        print("Invalid username or password")
+        raise TypeError
 
 
 def logout():
