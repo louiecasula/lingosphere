@@ -32,8 +32,9 @@
     [4] Exit
         "See you tomorrow!"
 # FUTURE FEATURES
-    Themed word days (holidays, anniversaries, special events)
-    Additional languages
+    Procedural -> OOP
     Email list
+    Themed word days (holidays, historic anniversaries, international events)
+    Additional languages
     Website
-    App
+    Mobile App
